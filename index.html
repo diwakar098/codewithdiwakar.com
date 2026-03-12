@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEWITHDIWAKAR.COM | Web, App & IoT Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+        body { background-color: #050505; color: #fff; font-family: 'Space Grotesk', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #9333ea); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { border-color: #3b82f6; box-shadow: 0 0 25px rgba(59, 130, 246, 0.15); transition: 0.5s ease; transform: translateY(-5px); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed w-full z-[100] py-4 px-6 md:px-16 flex justify-between items-center glass">
+        <div class="text-xl md:text-2xl font-bold tracking-tighter uppercase italic">
+            CODEWITHDIWAKAR<span class="text-blue-500">.COM</span>
+        </div>
+
+        <div class="hidden md:flex items-center gap-10 font-medium">
+            <a href="#about" class="text-gray-400 hover:text-white transition">Intro</a>
+            <a href="#services" class="text-gray-400 hover:text-white transition">Services</a>
+            <a href="#projects" class="text-gray-400 hover:text-white transition">Work</a>
+            <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+            <a href="https://wa.me/9954165980" class="bg-blue-600 px-6 py-2 rounded-full font-bold text-sm hover:bg-blue-700 transition">Order Now</a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-2xl text-white">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[80%] bg-black/95 backdrop-blur-3xl z-[200] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 ease-in-out md:hidden border-l border-white/10 shadow-2xl">
+            <button id="close-btn" class="absolute top-6 right-6 text-4xl text-white">&times;</button>
+            <a href="#about" class="mobile-link text-2xl font-bold tracking-widest uppercase">Intro</a>
+            <a href="#services" class="mobile-link text-2xl font-bold tracking-widest uppercase">Services</a>
+            <a href="#projects" class="mobile-link text-2xl font-bold tracking-widest uppercase">Work</a>
+            <a href="#contact" class="mobile-link text-2xl font-bold tracking-widest uppercase">Contact</a>
+            <a href="https://wa.me/9954165980" class="mobile-link bg-blue-600 px-8 py-3 rounded-full font-bold text-lg mt-4 shadow-lg shadow-blue-500/30">Order Now</a>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center px-6 pt-20">
+        <div class="text-xs font-mono mb-4 text-blue-500 tracking-widest uppercase border border-blue-500/30 px-4 py-1 rounded-full">Available for Hardware & Software Orders</div>
+        <h1 id="hero-title" class="text-6xl md:text-9xl font-bold text-center leading-[0.9] tracking-tighter">
+            CODE THE <span class="gradient-text">WEB.</span><br> BUILD THE <span class="gradient-text">BOTS.</span>
+        </h1>
+        <div class="mt-12 flex gap-4">
+            <a href="#contact" class="px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition transform active:scale-95">Start a Project</a>
+            <a href="#projects" class="px-10 py-4 border border-white/20 rounded-full font-bold hover:bg-white/10 transition">View Gallery</a>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="glass p-10 rounded-[3rem] border-blue-500/20 shadow-2xl shadow-blue-500/5">
+                <h3 class="text-blue-500 font-mono text-sm mb-4 tracking-widest uppercase">// THE_IDENTITY</h3>
+                <h2 class="text-5xl font-bold leading-none tracking-tighter mb-6 uppercase">DIWAKAR<br><span class="text-blue-500 italic">PAYUN.</span></h2>
+                <div class="space-y-4 text-gray-400">
+                    <div class="flex items-center gap-4"><i class="fas fa-location-dot text-blue-500"></i><span>Majuli, Assam, India</span></div>
+                    <div class="flex items-center gap-4"><i class="fas fa-microchip text-purple-500"></i><span>Hardware Enthusiast & Developer</span></div>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight uppercase">Merging <span class="text-blue-500 italic">Pixels</span> with <span class="text-purple-500 italic">Relays.</span></h2>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                   Hii I am a developer and hardware enthusiast based in Majuli, building next-gen web applications and custom IoT robotics. From smart water machines to modern service platforms like <span class="text-white italic">E-Commerce,Portfolio etc</span>, I turn complex logic into reality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold mb-12 tracking-tight">Technical <span class="text-blue-500">Expertise</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="glass card-hover md:col-span-2 p-10 rounded-[2.5rem] flex flex-col justify-between h-80">
+                <i class="fas fa-code text-4xl text-blue-500"></i>
+                <div>
+                    <h3 class="text-3xl font-bold">Web & App Dev</h3>
+                    <p class="text-gray-400 mt-2">Html, Css, Js, Next.js, Flutter, & scalable architectures.</p>
+                </div>
+            </div>
+            <div class="glass card-hover md:col-span-1 p-10 rounded-[2.5rem] flex flex-col justify-between">
+                <i class="fas fa-robot text-4xl text-purple-500"></i>
+                <h3 class="text-2xl font-bold">IoT Systems</h3>
+            </div>
+            <div class="glass card-hover md:col-span-1 p-10 rounded-[2.5rem] flex flex-col justify-between">
+                <i class="fas fa-microchip text-4xl text-green-500"></i>
+                <h3 class="text-2xl font-bold">Robotics</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-bold mb-12">Project <span class="text-blue-500">Showcase</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="glass rounded-[3rem] overflow-hidden group card-hover">
+                <div class="h-80 bg-blue-900/10 flex items-center justify-center relative">
+                    <span class="text-8xl opacity-10 group-hover:opacity-30 transition">🤖</span>
+                    <div class="absolute bottom-6 left-6 bg-blue-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">IoT Robotic</div>
+                </div>
+                <div class="p-10">
+                    <h3 class="text-3xl font-bold">Smart Vending</h3>
+                    <p class="text-gray-400 mt-4">Arduino-based system with 2-channel relays and custom payment logic.</p>
+                </div>
+            </div>
+            <div class="glass rounded-[3rem] overflow-hidden group card-hover">
+                <div class="h-80 bg-purple-900/10 flex items-center justify-center relative">
+                    <span class="text-8xl opacity-10 group-hover:opacity-30 transition">📱</span>
+                    <div class="absolute bottom-6 left-6 bg-purple-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Servezy PWA</div>
+                </div>
+                <div class="p-10">
+                    <h3 class="text-3xl font-bold">Service App</h3>
+                    <p class="text-gray-400 mt-4">Local service finder with WhatsApp integration and mobile-first UI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-32 text-center">
+        <div class="glass p-16 md:p-24 rounded-[4rem] relative overflow-hidden border border-blue-500/20">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
+            <h2 class="text-5xl md:text-7xl font-bold leading-tight uppercase">Ready to build <br> something <span class="text-blue-500 italic">insane?</span></h2>
+            <a href="https://wa.me/9954165980" class="inline-block mt-12 px-16 py-6 bg-blue-600 text-white text-xl font-bold rounded-full hover:bg-blue-700 transition shadow-xl shadow-blue-500/20">
+                <i class="fab fa-whatsapp mr-2"></i> ORDER VIA WHATSAPP
+            </a>
+        </div>
+    </section>
+
+    <section id="socials" class="max-w-7xl mx-auto px-6 py-12">
+        <h3 class="text-center text-gray-600 font-mono text-xs mb-10 tracking-[0.5em] uppercase">Connect on Socials</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="https://instagram.com/_diwakarpaayun_" target="_blank" class="glass card-hover p-8 rounded-[2rem] flex items-center justify-between group">
+                <div class="flex items-center gap-5">
+                    <div class="w-14 h-14 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fab fa-instagram"></i></div>
+                    <div><h4 class="font-bold">Instagram</h4><p class="text-sm text-gray-500">Daily Updates</p></div>
+                </div>
+                <i class="fas fa-arrow-up-right text-gray-700 group-hover:text-white transition"></i>
+            </a>
+            <a href="https://youtube.com/@codewithdiwakar" target="_blank" class="glass card-hover p-8 rounded-[2rem] flex items-center justify-between group">
+                <div class="flex items-center gap-5">
+                    <div class="w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-red-600/20"><i class="fab fa-youtube"></i></div>
+                    <div><h4 class="font-bold">YouTube</h4><p class="text-sm text-gray-500">IoT Tutorials</p></div>
+                </div>
+                <i class="fas fa-arrow-up-right text-gray-700 group-hover:text-white transition"></i>
+            </a>
+            <a href="mailto:dibakarpayun287@gmail.com" class="glass card-hover p-8 rounded-[2rem] flex items-center justify-between group">
+                <div class="flex items-center gap-5">
+                    <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-blue-600/20"><i class="fas fa-envelope"></i></div>
+                    <div><h4 class="font-bold">Email</h4><p class="text-sm text-gray-500">Business Inquiry</p></div>
+                </div>
+                <i class="fas fa-arrow-up-right text-gray-700 group-hover:text-white transition"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="p-10 text-center text-gray-600 font-mono text-sm border-t border-white/5 uppercase tracking-widest">
+        &copy; 2026 CODEWITHDIWAKAR.COM | Engineered in Majuli
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeSidebar = () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeBtn.addEventListener('click', closeSidebar);
+        mobileLinks.forEach(link => link.addEventListener('click', closeSidebar));
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from("#hero-title", { opacity: 0, y: 80, duration: 1.2, ease: "power4.out" });
+        
+        // Cards scroll animation
+        gsap.utils.toArray(".glass").forEach(card => {
+            gsap.from(card, {
+                opacity: 0, y: 50, duration: 0.8,
+                scrollTrigger: { trigger: card, start: "top 90%" }
+            });
+        });
+    </script>
+</body>
+</html>
